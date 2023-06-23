@@ -1,0 +1,38 @@
+@import "../../styles/main.scss";
+
+.button {
+	// background-color: var(--primary);
+	// color: #fff;
+	padding: 1rem 1.5rem;
+	border-radius: 12px;
+	border: none;
+	outline: none;
+	font-weight: bold;
+	font-size: 18px;
+	margin-left: 1rem;
+	transition: all 0.3s;
+
+	&:hover {
+		cursor: pointer;
+		animation: grow-shrink 0.4s ease forwards;
+	}
+}
+
+.primary {
+	background-color: var(--primary);
+	color: #fff;
+
+	&:hover {
+		background-color: var(--blue);
+	}
+}
+
+.secondary {
+	background-color: #fff;
+	color: #1f2f54;
+
+	&:hover {
+		background-color: var(--primary);
+		color: #fff;
+	}
+}

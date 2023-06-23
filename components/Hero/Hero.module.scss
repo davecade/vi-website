@@ -7,14 +7,34 @@
 
 	.hero_content {
 		@include flex-center;
-		width: 52%;
+		align-items: flex-end;
+		flex-direction: column;
 		height: 100vh;
-		justify-content: flex-end;
+		width: 52%;
 
-		&_message {
-			font-size: 66px;
-			color: #1f2f54;
-			width: 70%;
+		&_container {
+			@include flex-center;
+			flex-direction: column;
+			height: 100%;
+			width: 82%;
+
+			.hero_content_message {
+				color: #1f2f54;
+				font-size: 66px;
+				width: 70%;
+			}
+
+			.hero_content_description {
+				color: #6e7991;
+				font-size: 18px;
+				width: 70%;
+				line-height: 1.7;
+				margin-top: 2rem;
+			}
+
+			.button_container {
+				margin-top: 2rem;
+			}
 		}
 	}
 

@@ -1,4 +1,4 @@
-@import "../../styles//main.scss";
+@import "../../styles/main.scss";
 
 .navbar_container {
 	position: absolute;
@@ -8,9 +8,9 @@
 	padding: 2rem;
 	background-color: #fff;
 	border-radius: 20px;
-	width: 60%;
+	width: 68%;
 	z-index: 10;
-	top: 10%;
+	top: 7%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	box-shadow: 0 2px 8px 0 rgba(20, 20, 43, 0.08);
@@ -50,10 +50,10 @@
 			.chevron {
 				margin-left: 0.5rem;
 				transition: transform 0.5s;
-			}
 
-			.rotate {
-				transform: rotate(-180deg);
+				&.rotate {
+					transform: rotate(-180deg);
+				}
 			}
 		}
 	}
@@ -98,29 +98,5 @@
 				background-color: var(--blue);
 			}
 		}
-	}
-}
-
-@keyframes grow-shrink {
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(1.1);
-	}
-	100% {
-		transform: scale(1.05);
-	}
-}
-
-@keyframes shrink-grow {
-	0% {
-		transform: scale(1);
-	}
-	50% {
-		transform: scale(0.95);
-	}
-	100% {
-		transform: scale(1);
 	}
 }

@@ -6,6 +6,7 @@ import {
 	faSearch,
 	faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
+import Button from "../Button/Button";
 
 const Navbar = () => {
 	const [isHovered, setHovered] = useState(false);
@@ -58,7 +59,7 @@ const Navbar = () => {
 						className={styles.search_icon}
 					/>
 				</div>
-				<button className={styles.navbar_button}>Get Started</button>
+				<Button type='primary'>Get Started</Button>
 			</div>
 		</div>
 	);
