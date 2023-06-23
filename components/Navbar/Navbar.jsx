@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
 	faLayerGroup,
 	faSearch,
-	faChevronUp,
 	faChevronDown,
 } from "@fortawesome/free-solid-svg-icons";
 
@@ -42,9 +41,11 @@ const Navbar = () => {
 				>
 					<p>Pages</p>
 					<FontAwesomeIcon
-						icon={isHovered ? faChevronDown : faChevronUp}
+						icon={faChevronDown}
 						size={"1x"}
-						className={styles.chevron}
+						className={`${styles.chevron} ${
+							isHovered ? styles.rotate : ""
+						}`}
 					/>
 				</div>
 				<div className={styles.navbar_link}>Cart(0)</div>
@@ -57,7 +58,7 @@ const Navbar = () => {
 						className={styles.search_icon}
 					/>
 				</div>
-				<button className={styles.title_button}>Get Started</button>
+				<button className={styles.navbar_button}>Get Started</button>
 			</div>
 		</div>
 	);

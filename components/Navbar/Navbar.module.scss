@@ -32,7 +32,7 @@
 			}
 
 			&:hover {
-				animation: grow-shrink 0.5s ease forwards;
+				animation: grow-shrink 0.4s ease forwards;
 			}
 		}
 
@@ -49,26 +49,12 @@
 
 			.chevron {
 				margin-left: 0.5rem;
+				transition: transform 0.5s;
 			}
-		}
 
-		// .home {
-		// 	font-size: 18px;
-		// 	margin-right: 1rem;
-		// }
-		// .about {
-		// 	font-size: 18px;
-		// 	margin-right: 1rem;
-		// }
-		// .blog {
-		// 	font-size: 18px;
-		// 	margin-right: 1rem;
-		// }
-		// .pages {
-		// 	font-size: 18px;
-		// 	margin-right: 1rem;
-		// }
-		.cart {
+			.rotate {
+				transform: rotate(-180deg);
+			}
 		}
 	}
 
@@ -80,13 +66,21 @@
 			border: 1px solid #ebeef3;
 			box-shadow: 0 4px 10px 0 rgba(20, 20, 43, 0.04);
 			border-radius: 12px;
+			transition: all 0.3s;
 
 			.search_icon {
 				padding: 1rem;
 			}
+
+			&:hover {
+				background-color: var(--primary);
+				color: #fff;
+				animation: grow-shrink 0.4s ease forwards;
+				cursor: pointer;
+			}
 		}
 
-		.title_button {
+		.navbar_button {
 			background-color: var(--primary);
 			color: #fff;
 			padding: 1rem 1.5rem;
@@ -96,6 +90,13 @@
 			font-weight: bold;
 			font-size: 18px;
 			margin-left: 1rem;
+			transition: all 0.3s;
+
+			&:hover {
+				cursor: pointer;
+				animation: grow-shrink 0.4s ease forwards;
+				background-color: var(--blue);
+			}
 		}
 	}
 }
