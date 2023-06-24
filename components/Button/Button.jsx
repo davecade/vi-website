@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Button.module.scss";
 import PropTypes from "prop-types";
 
-const Button = ({ children = "", type = "primary" }) => {
+const Button = ({ children = "", type = "primary", className = "" }) => {
 	let styleType = "";
 
 	switch (type) {
@@ -19,15 +19,15 @@ const Button = ({ children = "", type = "primary" }) => {
 	}
 
 	return (
-		<button className={`${styles.button} ${styleType}`}>{children}</button>
+		<button className={`${styles.button} ${styleType} ${className}`}>
+			{children}
+		</button>
 	);
 };
 
 Button.propTypes = {
 	children: PropTypes.node.isRequired,
-	primary: PropTypes.bool,
-	variant: PropTypes.oneOf(["primary", "secondary"]),
-	style: PropTypes.object,
+	primary: PropTypes.oneOf(["primary", "secondary"]),
 };
 
 export default Button;
