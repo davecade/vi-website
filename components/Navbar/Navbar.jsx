@@ -12,16 +12,6 @@ const Navbar = () => {
 	const [isHovered, setHovered] = useState(false);
 
 	return (
-		//Left Side
-		//  Learnify Logo with Learnify X
-		//  Home
-		//  About
-		//  Blog
-		//  Pages with down shevron
-		//  Cart with number of items
-		//Right Side
-		//  Search Bar
-		// Custom Button
 		<div className={styles.navbar_container}>
 			<div className={styles.left_side}>
 				<div className={styles.title}>

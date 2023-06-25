@@ -1,4 +1,4 @@
-@import "../../styles/main.scss";
+@import "../../styles/main.module.scss";
 
 .navbar_container {
 	position: absolute;
@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	align-items: center;
 	padding: 2rem;
-	background-color: #fff;
+	background-color: var(--white);
 	border-radius: 20px;
 	width: 68%;
 	z-index: 10;
@@ -62,7 +62,7 @@
 		@include flex-center;
 
 		.search {
-			background-color: #fff;
+			background-color: var(--white);
 			border: 1px solid #ebeef3;
 			box-shadow: 0 4px 10px 0 rgba(20, 20, 43, 0.04);
 			border-radius: 12px;
@@ -74,7 +74,7 @@
 
 			&:hover {
 				background-color: var(--primary);
-				color: #fff;
+				color: var(--white);
 				animation: grow-shrink 0.4s ease forwards;
 				cursor: pointer;
 			}
@@ -82,7 +82,7 @@
 
 		.navbar_button {
 			background-color: var(--primary);
-			color: #fff;
+			color: var(--white);
 			padding: 1rem 1.5rem;
 			border-radius: 12px;
 			border: none;

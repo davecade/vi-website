@@ -1,3 +1,11 @@
 .home_container {
 	position: relative;
+
+	.loading_bar {
+		position: absolute;
+		top: 0;
+		border-top: 4px solid var(--primary);
+		z-index: 100;
+		transition: 0.5s all linear;
+	}
 }
