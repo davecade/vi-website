@@ -8,7 +8,7 @@ const index = () => {
 		setTimeout(() => setFirstLoad(false), 1000);
 	}, []);
 
-	return firstLoad ? <div>index</div> : <Home />;
+	return firstLoad ? <div></div> : <Home />;
 };
 
 export default index;
