@@ -37,11 +37,7 @@ const Hero = () => {
 								{Array(5)
 									.fill()
 									.map((_, i) => (
-										<FontAwesomeIcon
-											key={i}
-											icon={faStar}
-											color="#ffba07"
-										/>
+										<FontAwesomeIcon key={i} icon={faStar} color="#ffba07" />
 									))}
 							</div>
 							<p className={styles.ratings_text}>
@@ -53,17 +49,13 @@ const Hero = () => {
 						Learn the skills of tomorrow, today
 					</h1>
 					<p className={styles.hero_content_description}>
-						Convallis vivamus at cras porta nibh velit aliquam eget
-						in faucibus mi tristique aliquam ultrices sit cras
-						nascetur in elementum placerat sed viverra risus in
-						turpis vitae sed est tincidunt vitae.
+						Convallis vivamus at cras porta nibh velit aliquam eget in faucibus
+						mi tristique aliquam ultrices sit cras nascetur in elementum
+						placerat sed viverra risus in turpis vitae sed est tincidunt vitae.
 					</p>
 					<div className={styles.button_container}>
 						<Button>Explore Courses</Button>
-						<Button
-							type="secondary"
-							className={styles.learn_more_button}
-						>
+						<Button type="secondary" className={styles.learn_more_button}>
 							Learn more
 						</Button>
 					</div>
@@ -71,7 +63,7 @@ const Hero = () => {
 			</div>
 			<div className={styles.hero_portrait}>
 				<Image
-					src={'/images/portrait.png'}
+					src={"/images/portrait.png"}
 					height={735}
 					width={690}
 					alt="Description for the image"

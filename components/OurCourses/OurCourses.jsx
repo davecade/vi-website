@@ -1,6 +1,14 @@
 import React from "react";
 import styles from "./OurCourses.module.scss";
-import OurCoursesOption from "../OurCoursesOption/OurCoursesOption";
+import CoursesCategoryCard from "../CoursesCategoryCard/CoursesCategoryCard";
+import { capitalizeFirstLetter } from "../../utils/utils";
+
+const categoryURLs = {
+	all: "/icons/all-categories-icon-learnbook.svg",
+	design: "/icons/design-category-icon-learnbook.svg",
+	development: "/icons/development-category-icon-learnbook.svg",
+	marketing: "/icons/marketing-category-icon-learnbook.svg",
+};
 
 const OurCourses = () => {
 	return (
@@ -14,23 +22,16 @@ const OurCourses = () => {
 				morbi gravida hendrerit amet iaculis nibh nibh proin a vulputate turpis
 				amet.
 			</p>
-			<div className={styles.our_courses_options}>
-				<OurCoursesOption
-					url={"/icons/all-categories-icon-learnbook.svg"}
-					label={"All"}
-				/>
-				<OurCoursesOption
-					url={"/icons/design-category-icon-learnbook.svg"}
-					label={"All"}
-				/>
-				<OurCoursesOption
-					url={"/icons/development-category-icon-learnbook.svg"}
-					label={"All"}
-				/>
-				<OurCoursesOption
-					url={"/icons/marketing-category-icon-learnbook.svg"}
-					label={"All"}
-				/>
+			<div className={styles.our_courses_category_tabs}>
+				{Object.keys(categoryURLs).map((category, i) => {
+					return (
+						<CoursesCategoryCard
+							key={i}
+							url={categoryURLs[category]}
+							label={capitalizeFirstLetter(category)}
+						/>
+					);
+				})}
 			</div>
 		</div>
 	);
